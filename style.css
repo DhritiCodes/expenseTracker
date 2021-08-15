@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+    --shadow: 2px 2px 5px #8f8f8f;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 50px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #9e00d8;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px #cb3aff;
+    letter-spacing: 1px;
+}
+
+.container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8eafd;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.show-balance {
+    text-align: center;
+}
+
+h3 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c9c1c1;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+p.money {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.show-inc-exp {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: var(--shadow);
+}
+
+.show-inc-exp>* {
+    flex: 1;
+    text-align: center;
+}
+
+.show-inc-exp .plus {
+    color: #00f300;
+}
+
+.show-inc-exp .minus {
+    color: #ff0000;
+}
+
+
+/* list item */
+
+.list {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    box-shadow: var(--shadow);
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 5px;
+    color: #333;
+}
+
+li:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-115%, 18%);
+    background-color: #ff633c;
+    color: #fff;
+    padding: 4px 9px;
+    margin-left: 2px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+li.plus {
+    border-right: 7px solid #00f300;
+}
+
+li.minus {
+    border-right: 7px solid #ff0000;
+}
+
+input,
+button,
+.delete-btn:active {
+    outline: 0;
+    border: 0;
+}
+
+
+/* add new transaction */
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-control input {
+    padding: 10px;
+    border: none;
+    /* font: 18px; */
+}
+
+
+/* transaction button */
+
+.transaction {
+    cursor: pointer;
+    padding: 12px;
+    background-color: #ac72e7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.transaction:active {
+    transform: scale(0.98);
+}
